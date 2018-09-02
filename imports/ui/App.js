@@ -8,7 +8,7 @@ export default class App extends Component {
           <h1>Novum Opus</h1>
         </header>
 
-        <div>Pay the bills. Get qualified. Launch your career.</div>
+        <div>Pay the bills. Get qualified. Launch your career, debt-free.</div>
       </div>
     );
   }
