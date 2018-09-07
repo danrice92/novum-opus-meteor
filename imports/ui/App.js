@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import JobPost from './components/JobPost.js';
+import PostRow from './components/PostRow.js';
+import { Table } from 'reactstrap';
 
 export default class App extends Component {
   getJobPosts() {
@@ -41,7 +42,7 @@ export default class App extends Component {
 
   renderJobPosts() {
     return this.getJobPosts().map((post) => (
-      <JobPost key={post.id} post={post} />
+      <PostRow key={post.id} post={post} />
     ));
   }
 
@@ -53,10 +54,21 @@ export default class App extends Component {
         </header>
 
         <div>Pay the bills. Get qualified. Launch your career, debt-free.</div>
+        <br />
 
-        <ul>
-          {this.renderJobPosts()}
-        </ul>
+        <Table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Company</th>
+              <th>Pay</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.renderJobPosts()}
+          </tbody>
+        </Table>
       </div>
     );
   }
