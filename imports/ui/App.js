@@ -8,8 +8,8 @@ export default class App extends Component {
       <Container>
         <header>
           <h1>Novum Opus</h1>
+          <div>Pay the bills. Get qualified. Launch your career, debt-free.</div>
         </header>
-        <div>Pay the bills. Get qualified. Launch your career, debt-free.</div>
         <br />
         <JobPosts />
       </Container>

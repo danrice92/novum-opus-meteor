@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
-import { Col, Row, Collapse, Media } from 'reactstrap';
+import { Row, Col, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardLink, Button, CardHeader, CardFooter, Collapse, Media } from 'reactstrap';
 
 export default class PostDetails extends Component {
   constructor(props) {
     super(props);
+  }
+
+  showList(list) {
+    if (list.length == 0) {
+      return "None";
+    } else {
+      return list.join(', ');
+    }
   }
 
   render() {
@@ -23,19 +31,17 @@ export default class PostDetails extends Component {
 
     return(
       <Collapse isOpen={collapse}>
-        <Row>
-          <Col xs={{ size: 12, offset: 1 }}>Pay Structure: {pay_structure}</Col>
-          <Col xs={{ size: 12, offset: 1 }}>Benefits: {benefits}</Col>
-          <Col xs={{ size: 12, offset: 1 }}>Cost of Living Comparison: {cost_of_living_comparison}</Col>
-          <Col xs={{ size: 12, offset: 1 }}>Distance: {distance}</Col>
-          <Col xs={{ size: 12, offset: 1 }}>Description: {description}</Col>
-          <Col xs={{ size: 12, offset: 1 }}>Industry: {industry}</Col>
-          <Col xs={{ size: 12, offset: 1 }}>Work Environment: {work_environment}</Col>
-          <Col xs={{ size: 12, offset: 1 }}>Qualification Needs: {qualification_needs}</Col>
-          <Col xs={{ size: 12, offset: 1 }}>Qualification Wants: {qualification_wants}</Col>
-          <Col xs={{ size: 12, offset: 1 }}>Likelihood of getting the job: {likelihood}</Col>
-          <Col xs={{ size: 12, offset: 1 }}>Website: {website}</Col>
-        </Row>
+          <ul>
+            <li>Pay Structure: {pay_structure}</li>
+            <li>Benefits: {this.showList(benefits)}</li>
+            <li>Cost of Living: {cost_of_living_comparison}</li>
+            <li>Description: {description}</li>
+            <li>Industry: {this.showList(industry)}</li>
+            <li>Work Environment: {work_environment}</li>
+            <li>Qualification Needs: {this.showList(qualification_needs)}</li>
+            <li>Qualification Wants: {this.showList(qualification_wants)}</li>
+            <li>Interested? <a href={website}>Apply now!</a></li>
+          </ul>
       </Collapse>
     );
   }

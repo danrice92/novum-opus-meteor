@@ -1,0 +1,45 @@
+// Colors
+$blue: #2A62BD;
+$cerulean-frost: #6D9DC5;
+$light-blue: #4392F1;
+$gunmetal: #293132;
+
+// delete?
+$white: #FFFFFF;
+$medium-sky-blue: #80DED9;
+$pale-turquoise: #AEECEF;
+$cerulean: #087CA7;
+$royal-blue: #031A6B;
+$dark-midnight-blue: #033860;
+
+html {
+  body {
+    header {
+      h1 {
+        color: $blue;
+      }
+      div {
+        color: $cerulean-frost;
+      }
+    }
+
+    .post {
+      .card {
+        border-color: $cerulean-frost;
+        margin: 10px;
+        color: $gunmetal;
+
+        .card-body {
+          .card-title {
+            color: $cerulean-frost;
+            cursor: pointer;
+          }
+
+          a {
+            color: $cerulean-frost;
+          }
+        }
+      }
+    }
+  }
+}
