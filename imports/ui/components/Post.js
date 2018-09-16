@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 import PostDetails from './PostDetails.js';
 
-export default class PostRow extends Component {
+export default class Post extends Component {
   constructor(props) {
     super(props);
     this.state = { collapse: false };
@@ -20,12 +20,20 @@ export default class PostRow extends Component {
     return (
       <div className="post">
         <Row onClick={() => this.toggleDetails(id)}>
-          <Col xs="6">{title}</Col>
-          <Col xs="2">{company}</Col>
-          <Col xs="2">{pay}</Col>
-          <Col xs="2">{location}</Col>
+          <Col>
+            <Card>
+              <CardBody>
+                <CardTitle>
+                  {title} at {company}
+                </CardTitle>
+                <CardSubtitle>
+                  {pay} in {location}
+                  <PostDetails key={id} collapse={collapse} post={post} />
+                </CardSubtitle>
+              </CardBody>
+            </Card>
+          </Col>
         </Row>
-        <PostDetails key={id} collapse={collapse} post={post} />
       </div>
     );
   }
