@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardLink, Button, CardHeader, CardFooter, Collapse, Media } from 'reactstrap';
+import { Row, Col, Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 import PostDetails from './PostDetails.js';
 
 export default class Post extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardLink, Button, CardHeader, CardFooter, Collapse, Media } from 'reactstrap';
+import { Collapse } from 'reactstrap';
 
 export default class PostDetails extends Component {
   constructor(props) {
