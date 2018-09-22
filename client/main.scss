@@ -1,10 +1,10 @@
 // Colors
 $blue: #2A62BD;
 $cerulean-frost: #6D9DC5;
-$light-blue: #4392F1;
 $gunmetal: #293132;
 
 // delete?
+$light-blue: #4392F1;
 $white: #FFFFFF;
 $medium-sky-blue: #80DED9;
 $pale-turquoise: #AEECEF;
@@ -27,7 +27,6 @@ html {
       .card {
         border-color: $cerulean-frost;
         margin: 10px;
-        color: $gunmetal;
 
         .card-body {
           .card-title {
