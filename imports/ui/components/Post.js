@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Row, Col, Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 import PostDetails from './PostDetails.js';
 
+const numberWithCommas = (number) => {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 export default class Post extends Component {
   constructor(props) {
     super(props);
@@ -14,12 +18,12 @@ export default class Post extends Component {
 
   render() {
     const { post } = this.props;
-    const { id, title, company, pay, location } = this.props.post;
+    const { _id, title, company, annualPay, location } = this.props.post;
     const { collapse } = this.state;
 
     return (
       <div className="post">
-        <Row onClick={() => this.toggleDetails(id)}>
+        <Row onClick={() => this.toggleDetails(_id)}>
           <Col>
             <Card>
               <CardBody>
@@ -27,8 +31,8 @@ export default class Post extends Component {
                   {title} at {company}
                 </CardTitle>
                 <CardSubtitle>
-                  {pay} in {location}
-                  <PostDetails key={id} collapse={collapse} post={post} />
+                  ${numberWithCommas(annualPay)}/year in {location}
+                  <PostDetails key={_id} collapse={collapse} post={post} />
                 </CardSubtitle>
               </CardBody>
             </Card>

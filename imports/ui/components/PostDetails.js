@@ -16,30 +16,22 @@ export default class PostDetails extends Component {
 
   render() {
     const { collapse } = this.props;
-    const { pay_structure,
+    const { payStructure,
             benefits,
-            cost_of_living_comparison,
-            distance,
             description,
-            industry,
-            work_environment,
-            qualification_needs,
-            qualification_wants,
-            likelihood,
+            qualificationNeeds,
+            qualificationWants,
             website
           } = this.props.post;
 
     return(
       <Collapse isOpen={collapse}>
           <ul>
-            <li>Pay Structure: {pay_structure}</li>
+            <li>Pay Structure: {payStructure}</li>
             <li>Benefits: {this.showList(benefits)}</li>
-            <li>Cost of Living: {cost_of_living_comparison}</li>
             <li>Description: {description}</li>
-            <li>Industry: {this.showList(industry)}</li>
-            <li>Work Environment: {work_environment}</li>
-            <li>Qualification Needs: {this.showList(qualification_needs)}</li>
-            <li>Qualification Wants: {this.showList(qualification_wants)}</li>
+            <li>Required Qualifications: {this.showList(qualificationNeeds)}</li>
+            <li>Preferred Qualifications: {this.showList(qualificationWants)}</li>
             <li>Interested? <a href={website}>Apply now!</a></li>
           </ul>
       </Collapse>

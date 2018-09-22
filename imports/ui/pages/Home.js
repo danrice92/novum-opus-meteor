@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
-import JobPosts from './pages/JobPosts.js';
+import JobPostList from '../layouts/JobPostList.js';
 
-export default class App extends Component {
+export default class Home extends Component {
   render() {
     return (
       <Container>
@@ -11,7 +11,7 @@ export default class App extends Component {
           <div>Pay the bills. Get qualified. Launch your career, debt-free.</div>
         </header>
         <br />
-        <JobPosts />
+        <JobPostList />
       </Container>
     );
   }
