@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import { Collapse } from 'reactstrap';
 
 export default class PostDetails extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   showList(list) {
     if (list.length == 0) {
       return "None";
@@ -32,7 +28,7 @@ export default class PostDetails extends Component {
             <li>Description: {description}</li>
             <li>Required Qualifications: {this.showList(qualificationNeeds)}</li>
             <li>Preferred Qualifications: {this.showList(qualificationWants)}</li>
-            <li>Interested? <a href={website}>Apply now!</a></li>
+            <li>Interested? <a href={website} className="site-link">Apply now!</a></li>
           </ul>
       </Collapse>
     );

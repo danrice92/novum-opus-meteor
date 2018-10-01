@@ -1,25 +1,41 @@
 // Colors
 $blue: #2A62BD;
 $cerulean-frost: #6D9DC5;
-$gunmetal: #293132;
+$cool-green: #48A9A6;
+$light-purple: #8789C0;
 
 // delete?
 $light-blue: #4392F1;
 $white: #FFFFFF;
-$medium-sky-blue: #80DED9;
 $pale-turquoise: #AEECEF;
-$cerulean: #087CA7;
 $royal-blue: #031A6B;
 $dark-midnight-blue: #033860;
 
 html {
   body {
     header {
-      h1 {
-        color: $blue;
+      .navigation {
+        .hero-link {
+          color: $blue;
+          font-size: 32px;
+        }
+        .link {
+          color: $blue;
+          font-size: 16px;
+        }
       }
       div {
+        color: $blue;
+        padding-left: 16px;
+        font-size: 16px;
+      }
+    }
+
+    .job-posts {
+      h2.page-header {
         color: $cerulean-frost;
+        font-size: 24px;
+        padding-left: 16px;
       }
     }
 
@@ -30,13 +46,30 @@ html {
 
         .card-body {
           .card-title {
-            color: $blue;
+            color: $cerulean-frost;
             cursor: pointer;
           }
 
-          a {
-            color: $blue;
+          .site-link {
+            color: $cerulean-frost;
           }
+        }
+      }
+    }
+
+    .job-post-form {
+      padding-left: 16px;
+      h2.page-header {
+        color: $cool-green;
+        font-size: 24px;
+        padding: 0px;
+      }
+      button {
+        background-color: $cool-green;
+        border-color: $cool-green;
+        &:active, &:hover {
+          background-color: $cerulean-frost;
+          border-color: $cerulean-frost;
         }
       }
     }
