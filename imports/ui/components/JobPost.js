@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
-import PostDetails from './PostDetails.js';
+import JobPostDetails from './JobPostDetails.js';
 
 const numberWithCommas = (number) => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -32,7 +32,7 @@ export default class Post extends Component {
                 </CardTitle>
                 <CardSubtitle>
                   ${numberWithCommas(annualPay)}/year in {location}
-                  <PostDetails key={_id} collapse={collapse} post={post} />
+                  <JobPostDetails key={_id} collapse={collapse} post={post} />
                 </CardSubtitle>
               </CardBody>
             </Card>

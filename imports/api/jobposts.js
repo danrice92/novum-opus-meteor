@@ -6,17 +6,19 @@ export const JobPosts = new Mongo.Collection('jobposts');
 export const jobPostSchema = new SimpleSchema ({
   annualPay: Number,
   benefits: Array,
-  'benefits.$': String,
+    'benefits.$': String,
   company: String,
+  createdAt: Date,
   description: String,
   location: String,
   payStructure: String,
   qualificationNeeds: Array,
-  'qualificationNeeds.$': String,
+    'qualificationNeeds.$': String,
   qualificationWants: Array,
-  'qualificationWants.$': String,
+    'qualificationWants.$': String,
   title: String,
   website: String
+
 });
 
 JobPosts.attachSchema(jobPostSchema);

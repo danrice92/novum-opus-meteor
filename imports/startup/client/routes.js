@@ -3,6 +3,7 @@ import { Router, Route, Switch } from 'react-router';
 import createBrowserHistory from 'history/createBrowserHistory';
 
 import Home from '../../ui/pages/Home.js';
+import NewJobPost from '../../ui/pages/NewJobPost.js';
 
 const browserHistory = createBrowserHistory();
 
@@ -10,6 +11,7 @@ export const renderRoutes = () => (
   <Router history={browserHistory}>
     <Switch>
       <Route exact path="/" component={Home}/>
+      <Route exact path="/jobposts/new" component={NewJobPost}/>
     </Switch>
   </Router>
 );
