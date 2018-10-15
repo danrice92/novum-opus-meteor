@@ -1,8 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import { expect } from 'chai';
 
-import HomeTests from './pages/Home.test.js';
-import NewJobPostTests from './pages/NewJobPost.test.js';
+import HomePage from './pages/Home.test.js';
+import NewJobPostPage from './pages/NewJobPost.test.js';
 
 describe('novum-opus', function() {
   it("has the correct package.json name", async function() {
@@ -23,5 +23,5 @@ describe('novum-opus', function() {
   }
 });
 
-HomeTests();
-NewJobPostTests();
+HomePage();
+NewJobPostPage();

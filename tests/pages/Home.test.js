@@ -14,7 +14,7 @@ import Home from '../../imports/ui/pages/Home.js';
 
 spy(Home.prototype, 'render');
 
-export default function HomeTests() {
+export default function HomePage() {
   describe('<Home />', function() {
     it('calls render', function() {
       const wrapper = mount(<Home />);

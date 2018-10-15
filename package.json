@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
-    "test": "TEST_WATCH=1 TEST_BROWSER_DRIVER=nightmare meteor test --driver-package meteortesting:mocha --port 3100",
+    "test": "TEST_WATCH=1 meteor test --driver-package meteortesting:mocha --port 3100",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
@@ -13,7 +13,7 @@
     "history": "^4.7.2",
     "jquery": "^3.3.1",
     "meteor-node-stubs": "^0.4.1",
-    "react": "^16.6.0-alpha.8af6728",
+    "react": "^16.5.2",
     "react-addons-pure-render-mixin": "^15.6.2",
     "react-dom": "^16.4.2",
     "react-native": "^0.57.3",

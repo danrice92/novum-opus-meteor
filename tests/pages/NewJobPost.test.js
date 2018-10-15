@@ -14,7 +14,7 @@ import NewJobPost from '../../imports/ui/pages/NewJobPost.js';
 
 spy(NewJobPost.prototype, 'render');
 
-export default function NewJobPostTests() {
+export default function NewJobPostPage() {
   describe('<NewJobPost />', function() {
     it('calls render', function() {
       const wrapper = mount(<NewJobPost />);
