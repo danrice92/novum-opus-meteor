@@ -1,0 +1,10 @@
+
+> fsevents@1.2.4 install /Users/danrice/Software/Novum-Opus-Projects/novum-opus/node_modules/fsevents
+> node install
+
+[fsevents] Success: "/Users/danrice/Software/Novum-Opus-Projects/novum-opus/node_modules/fsevents/lib/binding/Release/node-v57-darwin-x64/fse.node" already installed
+Pass --update-binary to reinstall or --build-from-source to recompile
++ react-native@0.57.3
+added 751 packages from 288 contributors and audited 17370 packages in 37.347s
+found 0 vulnerabilities
+

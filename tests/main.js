@@ -1,21 +1,27 @@
-import assert from "assert";
-import chai from "chai";
+import { Meteor } from 'meteor/meteor';
+import { expect } from 'chai';
 
-describe("novum-opus", function () {
-  it("package.json has correct name", async function () {
+import HomePage from './pages/Home.test.js';
+import NewJobPostPage from './pages/NewJobPost.test.js';
+
+describe('novum-opus', function() {
+  it("has the correct package.json name", async function() {
     const { name } = await import("../package.json");
-    chai.assert.strictEqual(name, "novum-opus");
+    expect(name).to.equal("novum-opus");
   });
 
   if (Meteor.isClient) {
-    it("client is not server", function () {
-      chai.assert.strictEqual(Meteor.isServer, false);
+    it("is not the server", function() {
+      expect(Meteor.isServer).to.equal(false);
     });
   }
 
   if (Meteor.isServer) {
-    it("server is not client", function () {
-      chai.assert.strictEqual(Meteor.isClient, false);
+    it("is not the client", function() {
+      expect(Meteor.isClient).to.equal(false);
     });
   }
 });
+
+HomePage();
+NewJobPostPage();
