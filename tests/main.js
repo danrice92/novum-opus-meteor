@@ -1,40 +1,27 @@
-import 'jsdom-global/register';
-import React from 'react';
-import assert from "assert";
-import Home from '../imports/ui/pages/Home.js';
-import chai from "chai";
+import { Meteor } from 'meteor/meteor';
 import { expect } from 'chai';
-import Enzyme from 'enzyme';
-import { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import { spy } from 'sinon';
 
-Enzyme.configure({ adapter: new Adapter() })
+import HomeTests from './pages/Home.test.js';
+import NewJobPostTests from './pages/NewJobPost.test.js';
 
-describe('novum-opus', () => {
+describe('novum-opus', function() {
   it("has the correct package.json name", async function() {
     const { name } = await import("../package.json");
     expect(name).to.equal("novum-opus");
   });
 
   if (Meteor.isClient) {
-    it("is not the server", () => {
+    it("is not the server", function() {
       expect(Meteor.isServer).to.equal(false);
     });
   }
 
   if (Meteor.isServer) {
-    it("is not the client", () => {
+    it("is not the client", function() {
       expect(Meteor.isClient).to.equal(false);
     });
   }
 });
 
-spy(Home.prototype, 'render');
-
-describe('<Home />', () => {
-  it('calls render', () => {
-    const wrapper = mount(<Home />);
-    expect(Home.prototype.render).to.have.property('callCount', 1);
-  })
-})
+HomeTests();
+NewJobPostTests();

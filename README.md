@@ -26,4 +26,5 @@ Novum Opus is a job search platform that helps new entrants to the market find g
 
 ### Testing
 
-1. `meteor npm test` - runs the tests at localhost:3100. Click enter to rerun them.
+1. `meteor npm test` - runs the tests once at localhost:3100.
+2. `meteor npm watch-test` - runs the tests at localhost:3100 but watches for changes and reloads the test suite.
