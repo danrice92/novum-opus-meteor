@@ -22,9 +22,8 @@ Novum Opus is a job search platform that helps new entrants to the market find g
 
 ### Running the server
 
-1. `meteor` - runs the dev environment at localhost:3000
+1. `meteor npm start` - Runs the dev environment at localhost:3100
 
 ### Testing
 
-1. `meteor npm test` - runs the tests once at localhost:3100.
-2. `meteor npm watch-test` - runs the tests at localhost:3100 but watches for changes and reloads the test suite.
+1. `meteor npm test` - Runs the tests at localhost:3200, watching for changes to the project. Server tests run in the terminal, client tests run in the browser.

@@ -1,14 +1,18 @@
 import { Meteor } from 'meteor/meteor';
 import { expect } from 'chai';
 import { resetDatabase } from 'meteor/xolvio:cleaner';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-import HomePage from './pages/Home.test.js';
 import NewJobPostPage from './pages/NewJobPost.test.js';
+import ViewJobPosts from './features/ViewJobPosts.test.js';
 
 describe('novum-opus', function() {
   beforeEach(function() {
     resetDatabase();
+    Enzyme.configure({ adapter: new Adapter() });
   })
+
   it("has the correct package.json name", async function() {
     const { name } = await import("../package.json");
     expect(name).to.equal("novum-opus");
@@ -25,6 +29,7 @@ describe('novum-opus', function() {
       expect(Meteor.isClient).to.equal(false);
     });
   }
-  HomePage();
+
   NewJobPostPage();
+  ViewJobPosts();
 });

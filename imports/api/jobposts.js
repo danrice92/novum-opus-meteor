@@ -18,7 +18,6 @@ export const jobPostSchema = new SimpleSchema ({
     'qualificationWants.$': String,
   title: String,
   website: String
-
 });
 
 JobPosts.attachSchema(jobPostSchema);
