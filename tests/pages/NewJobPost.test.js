@@ -1,6 +1,4 @@
-if (Meteor.isServer) {
-  import 'jsdom-global/register';
-}
+if (Meteor.isServer) { import 'jsdom-global/register'; }
 import React from 'react';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
