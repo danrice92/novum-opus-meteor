@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Form, FormGroup, Label, Input, FormText, Button } from 'reactstrap';
 import Header from '../layouts/Header.js';
 import { JobPosts } from '../../api/jobposts.js';
+import { withRouter } from 'react-router';
 
 export default class NewJobPost extends Component {
   constructor(props) {
@@ -59,7 +60,8 @@ export default class NewJobPost extends Component {
       qualificationWants: [],
       website: ''
     });
-    console.log(JobPosts.find());
+    
+    this.props.history.push("/");
   }
 
   render() {
